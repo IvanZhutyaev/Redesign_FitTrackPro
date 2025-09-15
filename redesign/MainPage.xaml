@@ -1,121 +1,156 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="redesign.MainPage"
-             BackgroundColor="#FAF8F4"
+             x:Class="YourApp.MainPage"
+             BackgroundColor="#2F6B63"
              NavigationPage.HasNavigationBar="False">
 
-    <Grid RowDefinitions="Auto,*,Auto">
-        <!-- Верхний блок -->
-        <Grid Padding="25,50,25,20">
-            <Label Text="FITNESS TRACKER"
-                   FontSize="30"
-                   FontAttributes="Bold"
-                   TextColor="#000000" />
+    <AbsoluteLayout WidthRequest="360" HeightRequest="780">
 
-            <Label Text="Your personal trainer and nutritionist"
-                   FontSize="14"
-                   TextColor="#000000"
-                   Opacity="0.6"
-                   Margin="0,40,0,0" />
+        <!-- Огромный бежевый круг -->
+        <Ellipse AbsoluteLayout.LayoutBounds="-100,-150,600,600"
+                 AbsoluteLayout.LayoutFlags="None"
+                 Fill="#F7F4EF"/>
 
-            <Frame CornerRadius="20"
-                   BackgroundColor="#EDEBE7"
-                   WidthRequest="42"
-                   HeightRequest="42"
-                   Padding="0"
-                   HorizontalOptions="End"
-                   VerticalOptions="Start">
-                <Image Source="user_icon.png"
-                       WidthRequest="24"
-                       HeightRequest="24"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center" />
+        <!-- Оранжевый круг снизу -->
+        <Ellipse AbsoluteLayout.LayoutBounds="100,600,300,300"
+                 AbsoluteLayout.LayoutFlags="None"
+                 Fill="#E6A26A"/>
+
+        <!-- Контент (внутри бежевого круга) -->
+        <StackLayout AbsoluteLayout.LayoutBounds="20,60,320,600"
+                     AbsoluteLayout.LayoutFlags="None"
+                     Spacing="20">
+
+            <!-- Верх -->
+            <Grid ColumnDefinitions="*,Auto" Padding="0,0,0,20">
+                <StackLayout Spacing="6" VerticalOptions="Center">
+                    <Label Text="FITNESS TRACKER"
+                           FontSize="28"
+                           FontAttributes="Bold"
+                           TextColor="#000000"/>
+                    <Label Text="Your personal trainer and nutritionist"
+                           FontSize="14"
+                           TextColor="#8C8C8C"/>
+                </StackLayout>
+                <Frame WidthRequest="40" HeightRequest="40"
+                       CornerRadius="20"
+                       BackgroundColor="White"
+                       HasShadow="False"
+                       VerticalOptions="Center">
+                    <Image Source="user_icon.png"
+                           WidthRequest="22" HeightRequest="22"
+                           HorizontalOptions="Center" VerticalOptions="Center"/>
+                </Frame>
+            </Grid>
+
+            <!-- Кнопка -->
+            <Button Text="Start Workout"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    BackgroundColor="#C98C52"
+                    CornerRadius="15"
+                    HeightRequest="60"
+                    HorizontalOptions="FillAndExpand"/>
+
+            <!-- Steps + Workouts -->
+            <Grid ColumnSpacing="15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Frame Grid.Column="0"
+                       BackgroundColor="White"
+                       CornerRadius="15"
+                       Padding="15"
+                       HasShadow="False">
+                    <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="6">
+                        <Label Text="7,120"
+                               FontSize="24"
+                               FontAttributes="Bold"
+                               TextColor="#000000"
+                               HorizontalOptions="Center"/>
+                        <Label Text="steps"
+                               FontSize="14"
+                               TextColor="#8C8C8C"
+                               HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <Frame Grid.Column="1"
+                       BackgroundColor="White"
+                       CornerRadius="15"
+                       Padding="15"
+                       HasShadow="False">
+                    <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="8">
+                        <Image Source="workout_icon.png"
+                               WidthRequest="28" HeightRequest="28"
+                               HorizontalOptions="Center"/>
+                        <Label Text="Workouts"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               TextColor="#000000"
+                               HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+                </Frame>
+            </Grid>
+
+            <!-- Nutrition -->
+            <Frame BackgroundColor="White"
+                   CornerRadius="15"
+                   Padding="15"
+                   HasShadow="False">
+                <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="8">
+                    <Image Source="nutrition_icon.png"
+                           WidthRequest="28" HeightRequest="28"
+                           HorizontalOptions="Center"/>
+                    <Label Text="Nutrition"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           TextColor="#000000"
+                           HorizontalOptions="Center"/>
+                </VerticalStackLayout>
             </Frame>
-        </Grid>
+        </StackLayout>
 
-        <!-- Центральный блок -->
-        <ScrollView Grid.Row="1">
-            <VerticalStackLayout Spacing="25" Padding="25,10">
-                <!-- Кнопка Start Workout -->
-                <Button Text="Start Workout"
-                        FontSize="20"
-                        FontAttributes="Bold"
-                        TextColor="White"
-                        BackgroundColor="#D19A5E"
-                        CornerRadius="20"
-                        HeightRequest="65"
-                        HorizontalOptions="FillAndExpand" />
+        <!-- Нижний прямоугольный блок -->
+        <Grid AbsoluteLayout.LayoutBounds="0,700,360,80"
+              AbsoluteLayout.LayoutFlags="None"
+              BackgroundColor="#E6A26A"
+              Padding="40,0"
+              ColumnSpacing="50">
 
-                <!-- Карточки -->
-                <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto" ColumnSpacing="20" RowSpacing="20">
-                    <!-- Steps -->
-                    <Frame Grid.Row="0" Grid.Column="0"
-                           BackgroundColor="White"
-                           CornerRadius="22"
-                           Padding="20"
-                           HasShadow="True">
-                        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-                            <Label Text="7,120"
-                                   FontSize="26"
-                                   FontAttributes="Bold"
-                                   TextColor="#000000"
-                                   HorizontalOptions="Center" />
-                            <Label Text="steps"
-                                   FontSize="14"
-                                   TextColor="#000000"
-                                   Opacity="0.6"
-                                   HorizontalOptions="Center" />
-                        </StackLayout>
-                    </Frame>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
 
-                    <!-- Workouts -->
-                    <Frame Grid.Row="0" Grid.Column="1"
-                           BackgroundColor="White"
-                           CornerRadius="22"
-                           Padding="20"
-                           HasShadow="True">
-                        <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="8">
-                            <Image Source="workout_icon.png" HeightRequest="32" WidthRequest="32" HorizontalOptions="Center"/>
-                            <Label Text="Workouts"
-                                   FontSize="16"
-                                   FontAttributes="Bold"
-                                   TextColor="#000000"
-                                   HorizontalOptions="Center" />
-                        </StackLayout>
-                    </Frame>
-
-                    <!-- Nutrition -->
-                    <Frame Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
-                           BackgroundColor="White"
-                           CornerRadius="22"
-                           Padding="20"
-                           HasShadow="True">
-                        <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="8">
-                            <Image Source="nutrition_icon.png" HeightRequest="32" WidthRequest="32" HorizontalOptions="Center"/>
-                            <Label Text="Nutrition"
-                                   FontSize="16"
-                                   FontAttributes="Bold"
-                                   TextColor="#000000"
-                                   HorizontalOptions="Center" />
-                        </StackLayout>
-                    </Frame>
-                </Grid>
-            </VerticalStackLayout>
-        </ScrollView>
-
-        <!-- Нижняя навигация -->
-        <Grid Grid.Row="2" ColumnDefinitions="*,*,*" Padding="25,15" BackgroundColor="Transparent">
             <!-- Home -->
-            <Image Source="home_icon.png" WidthRequest="28" HeightRequest="28" HorizontalOptions="Center" VerticalOptions="Center" />
+            <Image Source="home_icon.png"
+                   WidthRequest="28" HeightRequest="28"
+                   Grid.Column="0"
+                   HorizontalOptions="Center" VerticalOptions="Center"/>
 
-            <!-- Add -->
-            <Frame Grid.Column="1" WidthRequest="60" HeightRequest="60" CornerRadius="30" BackgroundColor="#D19A5E" HorizontalOptions="Center" VerticalOptions="Center">
-                <Label Text="+" FontSize="28" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" />
+            <!-- Центральная кнопка -->
+            <Frame Grid.Column="1"
+                   WidthRequest="60" HeightRequest="60"
+                   CornerRadius="30"
+                   BackgroundColor="#C98C52"
+                   HasShadow="True"
+                   HorizontalOptions="Center" VerticalOptions="Center">
+                <Image Source="plus_icon.png"
+                       WidthRequest="28" HeightRequest="28"
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
             </Frame>
 
-            <!-- Activity -->
-            <Image Grid.Column="2" Source="activity_icon.png" WidthRequest="28" HeightRequest="28" HorizontalOptions="Center" VerticalOptions="Center" />
+            <!-- Stats -->
+            <Image Source="stats_icon.png"
+                   WidthRequest="28" HeightRequest="28"
+                   Grid.Column="2"
+                   HorizontalOptions="Center" VerticalOptions="Center"/>
         </Grid>
-    </Grid>
+
+    </AbsoluteLayout>
 </ContentPage>
