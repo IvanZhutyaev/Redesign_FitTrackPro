@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("redesign")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+4de404b9d69e1fc59613690edcce504932bb8f0e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+de09111670d40f0b0410db25ad21264d504a8096")]
 [assembly: System.Reflection.AssemblyProductAttribute("redesign")]
 [assembly: System.Reflection.AssemblyTitleAttribute("redesign")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

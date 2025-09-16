@@ -29,13 +29,13 @@
     <AppXManifest Include="C:\MY PROJECTS\Redesign_FitTrackPro\redesign\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-09-15T13:45:47.186</Modified>
+      <Modified>2025-09-16T09:39:43.463</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\MY PROJECTS\Redesign_FitTrackPro\redesign\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-09-15T13:39:01.223</Modified>
+      <Modified>2025-09-16T09:39:43.105</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MY PROJECTS\Redesign_FitTrackPro\redesign\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\redesign.runtimeconfig.json">
       <PackagePath>redesign.runtimeconfig.json</PackagePath>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MY PROJECTS\Redesign_FitTrackPro\redesign\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\redesign.dll">
       <PackagePath>redesign.dll</PackagePath>
-      <Modified>2025-09-15T13:45:46.528</Modified>
+      <Modified>2025-09-16T09:39:40.325</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MY PROJECTS\Redesign_FitTrackPro\redesign\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>redesign.exe</PackagePath>
-      <Modified>2025-09-15T13:45:46.538</Modified>
+      <Modified>2025-09-16T09:39:40.351</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MY PROJECTS\Redesign_FitTrackPro\redesign\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -315,7 +315,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MY PROJECTS\Redesign_FitTrackPro\redesign\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\redesign.deps.json">
       <PackagePath>redesign.deps.json</PackagePath>
-      <Modified>2025-09-13T10:54:15.690</Modified>
+      <Modified>2025-09-16T09:39:42.571</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ivan Zhutyaev\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.57\lib\net8.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
